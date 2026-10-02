@@ -1,4 +1,4 @@
 interface:
   display_name: "Provider Integration"
-  short_description: "Integrate providers with stable contracts"
-  default_prompt: "Use $provider-integration to implement and audit provider contracts, adapter layers, and integration reliability gates."
+  short_description: "Integrate APIs and AI providers with typed fallbacks"
+  default_prompt: "Use $provider-integration to define typed capability adapters, normalize provider contracts, validate tool/output schemas, and prove timeout, drift, substitution, and deterministic fallback behavior."

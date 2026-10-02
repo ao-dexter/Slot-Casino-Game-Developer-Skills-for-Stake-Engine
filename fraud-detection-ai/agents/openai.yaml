@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fraud Detection AI"
+  short_description: "Design calibrated fraud detection and review workflows"
+  default_prompt: "Use $fraud-detection-ai to define authorized signals, calibrated thresholds, reason codes, drift checks, human review, and reversible enforcement."

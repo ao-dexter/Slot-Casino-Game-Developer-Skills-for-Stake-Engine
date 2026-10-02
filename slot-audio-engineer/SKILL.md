@@ -16,7 +16,7 @@ Use this skill to design and implement immersive audio experiences that drive pl
 2. Design and Produce Assets.
 - Create seamless loops for background and features.
 - Design sound effects (SFX) for interactions.
-- Ensure audio levels are balanced and normalized (-14 LUFS target).
+- Define and measure the product's loudness, peak, and dynamic-range targets.
 
 3. Integrate and Synchronize.
 - Map audio events to game state changes.
@@ -40,3 +40,9 @@ Return:
 
 - `references/workflow.md`: Detailed audio production workflow.
 - `references/checklist.md`: Quality assurance checklist for audio.
+
+## Execution Rules
+
+- Bind audio to deterministic frontend events, never settlement inference.
+- Provide mute, persisted volume, and interruption behavior.
+- Verify fast play, replay, reduced intensity, and representative mobile devices.

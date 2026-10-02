@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engine Platform Architect"
+  short_description: "Architect current Engine game integrations"
+  default_prompt: "Use $engine-platform-architect to map Engine frontend, math, RGS, replay, security, recovery, and release boundaries against the live documentation."

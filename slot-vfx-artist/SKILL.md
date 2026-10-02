@@ -18,7 +18,7 @@ Use this skill to create high-impact visual effects that enhance game excitement
 - Write shaders for glow, distortion, and color grading.
 
 3. Animate and Sequence.
-- keyframe animation properties (scale, opacity, position).
+- Keyframe animation properties (scale, opacity, position).
 - Sequence effects with game events and audio.
 
 4. Optimize Performance.
@@ -37,3 +37,9 @@ Return:
 ## References
 
 - `references/workflow.md`: VFX pipeline and best practices.
+
+## Execution Rules
+
+- Treat VFX as deterministic playback of event/book state.
+- Provide fast-play and reduced-motion variants.
+- Require provenance and human/IP review for generated assets.

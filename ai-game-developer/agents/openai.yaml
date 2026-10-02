@@ -1,4 +1,4 @@
 interface:
   display_name: "AI Game Developer"
-  short_description: "Build and validate AI-powered game implementations"
-  default_prompt: "Use $ai-game-developer to implement or audit AI-driven gameplay systems, runtime integrations, and validation gates for production readiness."
+  short_description: "Build AI game systems with tools, evals, and fallbacks"
+  default_prompt: "Use $ai-game-developer to define typed model and tool contracts, route by measured capability, implement deterministic fallback, and prove quality with adversarial evals and traces."

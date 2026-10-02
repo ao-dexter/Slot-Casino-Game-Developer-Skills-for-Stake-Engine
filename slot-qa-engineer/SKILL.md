@@ -11,7 +11,8 @@ Use this skill to ensure game quality, stability, and compliance before release.
 
 1. Analyze Requirements.
 - Review math model, game rules, and UI specifications.
-- Identify edge cases (max win, zero balance, network disconnects).
+- Identify zero/ordinary/feature/large/max-win rounds, active-round resume,
+  network failure, replay, and jurisdiction cases.
 
 2. Design Test Plan.
 - Define test cases for functional, regression, and performance testing.
@@ -20,7 +21,8 @@ Use this skill to ensure game quality, stability, and compliance before release.
 3. Execute Testing.
 - Run manual tests for UX flow and animation glitches.
 - Run automated tests for math verification and stability.
-- Verify compliance with jurisdiction rules (e.g., reality checks, time limits).
+- Verify Engine RGS, static books, public replay, responsive layouts,
+  accessibility, performance, and current jurisdiction flags.
 
 4. Report and Track.
 - Log defects with reproduction steps and severity.
@@ -28,7 +30,7 @@ Use this skill to ensure game quality, stability, and compliance before release.
 
 5. Final Sign-off.
 - Validate against release checklist.
-- confirm all critical and high-priority bugs are resolved.
+- Confirm all critical and high-priority bugs are resolved.
 
 ## Output Contract
 
@@ -42,3 +44,10 @@ Return:
 
 - `references/workflow.md`: QA process and stages.
 - `references/test-plan.md`: Template for test planning.
+
+## Execution Rules
+
+- Use deterministic event/book fixtures for UI and replay evidence.
+- Never infer settlement correctness from animation alone.
+- Record game version, artifact hashes, RGS environment, device, language, and
+  jurisdiction with every result.

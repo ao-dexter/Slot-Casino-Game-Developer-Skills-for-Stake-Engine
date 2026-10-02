@@ -1,6 +1,6 @@
 ---
 name: senior-game-math-engineer
-description: Design, audit, and tune casino game math for Stake-style game pipelines. Use when defining mode math, paytables, reel strips, feature frequencies, RTP/volatility/hit-rate targets, book weights, max-win controls, simulation plans, or release sign-off evidence.
+description: Design, audit, and tune casino game math for Engine-style static-book pipelines. Use when defining mode math, paytables, reel strips, feature frequencies, RTP/volatility/hit-rate targets, book weights, max-win controls, simulation plans, or release sign-off evidence.
 ---
 
 # Senior Game Math Engineer

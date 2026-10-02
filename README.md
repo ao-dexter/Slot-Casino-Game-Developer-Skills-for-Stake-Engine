@@ -1,99 +1,143 @@
-# Slot & Casino Game Developer Skills for Stake Engine 🎰
+# Engine Casino Game Development Skills
 
-Welcome to the **Slot & Casino Game Developer Skills for Stake Engine** collection! This repository provides a suite of specialized AI skills designed to accelerate the development, optimization, and deployment of casino games for the Stake Engine ecosystem and modern iGaming platforms.
+Production-oriented AI skills for designing, building, validating, and publishing
+games on [Engine](https://studio.engine.io/docs). The collection covers the
+static-math game format, Engine RGS integration, frontend event playback,
+simulation and optimization, approval gates, and AI-assisted studio workflows.
 
-Whether you are designing slot mechanics, optimizing RTP, integrating with the Stake platform, or polishing UI/UX, these skills act as your autonomous pair-programmers to ensure high-quality, compliance-ready delivery.
+The Engine-specific guidance was reviewed against the live documentation on
+2026-10-02. External AI capability references are limited to sources published
+within the previous three months. See [docs/SOURCES.md](docs/SOURCES.md).
 
-## 🚀 Skills Overview
+## Start here
 
-### 🎲 Game Design & Math
-*   **`game-math-director`**: Direct game-math strategy, target setting, and validation governance across game modes.
-*   **`senior-game-math-engineer`**: Design, audit, and tune casino game math for Stake-style game pipelines.
-*   **`slot-mechanics-designer`**: Design and harden slot feature mechanics from product idea to implementation-ready behavior spec.
-*   **`ai-game-designer`**: Design and validate AI-assisted game design specifications from concept to implementation handoff.
-*   **`ux-retention-designer`**: Design retention-focused UX systems for games with measurable engagement impact.
-*   **`ui-slot-ux-designer`**: Design and validate slot game UI/UX flows for desktop and mobile play.
+- **`engine-game-developer`**: Canonical end-to-end Engine workflow. Use this
+  first for a new game or a release-readiness review.
+- **`senior-game-math-engineer`**: Math model, simulation diversity, RTP,
+  volatility, tail-risk, and publication evidence.
+- **`book-generator`**: Engine-compatible compressed books, lookup tables, and
+  index metadata.
+- **`pixi-svelte-integrator`**: Event-driven PixiJS and Svelte frontend
+  integration.
+- **`slot-qa-engineer`**: Math, RGS, replay, UI, performance, and jurisdiction
+  test planning.
 
-### 💎 Stake Specific
-*   **`stake-game-developer`**: End-to-end Stake game development workflow for math, RGS contract, frontend playback, and compliance gating.
-*   **`stake-engine-game-builder`**: Build, adapt, and review casino game implementations specifically for Stake Engine requirements.
-*   **`stake-platform-architect`**: Architect Stake platform integration layers across services, contracts, and release workflows.
+`stake-game-developer` remains as a compatibility alias for existing users.
+New projects should use `engine-game-developer`.
 
-### 📊 RTP & Balancing
-*   **`rtp-optimizer`**: Optimize and validate slot/casino RTP against explicit targets using simulation evidence.
-*   **`rtp-ao-optimizer`**: Optimize RTP and AO targets under controlled constraints and statistical validation gates.
-*   **`auto-balancer`**: Automatically tune game/system parameters toward target metrics under explicit constraints.
+## Skill catalog
 
-### 🛠️ Engineering & Core Systems
-*   **`cpp-engine-core`**: Develop and harden C++ engine core systems with correctness, stability, and performance controls.
-*   **`cpp-performance-engineer`**: Profile, diagnose, and optimize C++ performance bottlenecks.
-*   **`low-latency-systems`**: Design, diagnose, and optimize low-latency request paths.
-*   **`parallel-computing`**: Design and validate parallel execution across CPU threads/workers.
-*   **`wasm-integration`**: Integrate and harden WebAssembly modules in frontend/backend pipelines.
-*   **`rng-crypto-specialist`**: Design and audit provably fair RNG and cryptographic seed workflows.
+### Engine platform
 
-### 🎨 Frontend & Animation
-*   **`event-animation-designer`**: Design, sequence, and validate event-driven animation systems.
-*   **`pixi-svelte-integrator`**: Integrate and validate PixiJS rendering pipelines inside Svelte applications.
-*   **`slot-ui-studio`**: Build scalable slot UI production systems with shared components.
+| Skill | Purpose |
+| --- | --- |
+| `engine-game-developer` | Build and validate an Engine game from brief through approval. |
+| `stake-game-developer` | Backward-compatible alias for `engine-game-developer`. |
+| `engine-platform-architect` | Design RGS, frontend, math, security, and release boundaries. |
+| `stake-platform-architect` | Backward-compatible alias for `engine-platform-architect`. |
+| `provider-integration` | Implement provider adapters, resilience, and contract checks. |
+| `game-info-author` | Produce current game rules, mode disclosures, and disclaimer copy. |
 
-### 🤖 AI & Automation
-*   **`ai-game-developer`**: Build, integrate, and validate AI-driven gameplay systems.
-*   **`ai-slot-game-developer`**: Build and validate AI-driven slot gameplay systems in production runtimes.
-*   **`freud-detection-ai`**: Design AI-driven anomaly/fraud-style detection workflows.
-*   **`multi-agent-orchestrator`**: Coordinate multi-agent execution plans with explicit dependencies.
+### Game design and math
 
-### 📈 Data & Operations
-*   **`book-factory`**: Generate and validate high-volume game book artifacts.
-*   **`book-generator`**: Generate, package, and validate weighted outcome books.
-*   **`telemetry-analytics`**: Design telemetry and analytics systems for reliable KPI tracking.
-*   **`provider-integration`**: Integrate external/internal providers through stable adapter contracts.
-*   **`studio-scaling`**: Scale game studio delivery systems across teams and pipelines.
+| Skill | Purpose |
+| --- | --- |
+| `game-math-director` | Set targets, governance, evidence, and release gates. |
+| `senior-game-math-engineer` | Design and audit Engine-compatible game math. |
+| `slot-mechanics-designer` | Specify mechanics, states, triggers, and edge cases. |
+| `rtp-optimizer` | Tune RTP and distribution targets with simulation evidence. |
+| `auto-balancer` | Iterate parameters against explicit metric constraints. |
+| `book-generator` | Generate and validate weighted outcome books. |
+| `rng-crypto-specialist` | Audit RNG and provably-fair workflows where applicable. |
 
-## 📦 How to Use & Installation
+### Frontend, UX, and media
 
-You can use these skills as "Context Paks" or "Rule Sets" in your favorite AI-powered IDEs.
+| Skill | Purpose |
+| --- | --- |
+| `pixi-svelte-integrator` | Integrate PixiJS rendering with Svelte lifecycle and events. |
+| `event-animation-designer` | Map ordered book events to deterministic animation. |
+| `slot-ui-studio` | Build reusable production UI systems. |
+| `ui-slot-ux-designer` | Specify responsive and accessible player flows. |
+| `autoplay-system-designer` | Define autoplay confirmations and stop conditions. |
+| `turbo-spin-designer` | Define fast-play timing without changing outcomes. |
+| `css-motion-designer` | Design CSS motion with reduced-motion support. |
+| `slot-audio-engineer` | Design and validate audio behavior. |
+| `slot-vfx-artist` | Design and validate visual-effects behavior. |
+| `ux-retention-designer` | Design ethical, measurable engagement loops. |
 
-### 🔹 Trae & Windsurf
-1.  Navigate to your project root.
-2.  Create a folder named `.trae/skills` or `.windsurf/skills` (depending on your IDE).
-3.  Copy the desired skill folders (e.g., `stake-game-developer`, `game-math-director`) into this directory.
-4.  The IDE will automatically index these skills. You can now invoke them using `@` mention or natural language.
+### AI-assisted development
 
-### 🔹 Cursor
-1.  Create a `.cursorrules` file in your project root.
-2.  Copy the content of the `SKILL.md` file from the specific skill you want to use.
-3.  Paste it into `.cursorrules`.
-4.  Alternatively, place the skill markdown files in a `docs/skills/` folder and reference them in your prompt using `@docs/skills/skill-name.md`.
+| Skill | Purpose |
+| --- | --- |
+| `ai-game-designer` | Use multimodal, tool-using models to produce testable design artifacts. |
+| `ai-game-developer` | Build AI features with typed tools, evals, routing, and fallbacks. |
+| `ai-slot-game-developer` | Apply AI without putting payout-critical logic at risk. |
+| `multi-agent-orchestrator` | Coordinate parallel specialists and independent verification. |
+| `fraud-detection-ai` | Design anomaly detection with calibrated review and audit trails. |
+| `freud-detection-ai` | Backward-compatible alias for `fraud-detection-ai`. |
 
-### 🔹 ChatGPT / Claude / LLMs
-1.  Simply copy the content of the `SKILL.md` file (and any referenced files in `references/`).
-2.  Paste it into the chat as "Context" or "System Instruction".
-3.  Tell the AI: *"Use the attached skill instructions to help me with [Task]."*
+### Engineering and operations
 
----
+| Skill | Purpose |
+| --- | --- |
+| `cpp-engine-core` | Develop stable C++ engine components. |
+| `cpp-performance-engineer` | Profile and optimize measured bottlenecks. |
+| `low-latency-systems` | Improve p50/p95/p99 request paths. |
+| `parallel-computing` | Scale CPU and worker workloads safely. |
+| `wasm-integration` | Integrate and validate WebAssembly artifacts. |
+| `telemetry-analytics` | Define trustworthy events, metrics, and anomaly checks. |
+| `slot-qa-engineer` | Plan and execute game release validation. |
+| `studio-scaling` | Improve studio throughput and release governance. |
 
-## 🚀 Example Usage
+## Installation
 
-**Prompt:**
-> "I need to design the math for a new slot game with 96% RTP."
+Canonical skill directories contain their operating instructions and local
+support files:
 
-**Agent Action:**
-The agent will invoke `senior-game-math-engineer` (if installed) or use the provided context to assist you.
+```text
+<skill-name>/
+├── SKILL.md
+├── agents/openai.yaml        # when an OpenAI-compatible UI descriptor is used
+├── references/               # deeper rules and templates
+└── scripts/                  # deterministic validators
+```
 
-## 🤝 Support & Donations
+Copy the complete skill directory into the skills location supported by your
+agent or IDE. Keep `references/` and `scripts/` beside `SKILL.md`; copying only
+the prompt removes the deterministic checks that make the skill reliable.
+Compatibility aliases intentionally point to their canonical sibling and should
+be installed with it.
 
-These skills are open for the community to use and improve. If you find them useful, consider supporting the development!
+Common patterns:
 
-**Donations (ETH/USD):**
-`0xc6ffc6688557f825f2bb92378c51306d681cbafa`
+- **Claude Code / agent skill clients**: copy the directory into the client's
+  project or user skills directory.
+- **OpenAI-compatible coding agents**: install the directory as a skill and
+  retain `agents/openai.yaml`.
+- **Cursor, Windsurf, and similar IDEs**: add the skill directory to the
+  project's agent/rules context and invoke it by name.
+- **Chat interfaces**: attach the complete directory or paste `SKILL.md` plus
+  only the referenced files needed for the task.
 
-## 📞 Contact
+## Example
 
-For questions, feedback, or collaboration, please reach out:
+```text
+Use engine-game-developer and senior-game-math-engineer to design a 96% RTP
+slot. Produce the mode contract, simulation plan, book/event schema, frontend
+event map, approval checklist, and commands that verify every generated
+artifact. Do not implement payout-critical behavior with a generative model.
+```
 
-*   **GitHub Repository:** [https://github.com/egorfedorov/Slot-Casino-Game-Developer-Skills-for-Stake-Engine](https://github.com/egorfedorov/Slot-Casino-Game-Developer-Skills-for-Stake-Engine)
-*   **X (Twitter):** [https://x.com/egorfdrv](https://x.com/egorfdrv)
+## Repository validation
 
----
-*Happy Coding & Good Luck!* 🎰
+```bash
+python3 scripts/validate_repository.py
+```
+
+The validator checks skill metadata, folder/name alignment, referenced local
+files, command targets, malformed merge artifacts, and README catalog entries.
+
+## Project
+
+- Repository: https://github.com/ao-dexter/Slot-Casino-Game-Developer-Skills-for-Stake-Engine
+- Engine documentation: https://studio.engine.io/docs

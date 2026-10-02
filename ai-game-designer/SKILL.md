@@ -1,35 +1,43 @@
 ---
 name: ai-game-designer
-description: Design and validate AI-assisted game design specifications from concept to implementation handoff. Use when defining core loops, progression systems, economy sinks/sources, feature specs, risk constraints, content generation hooks, or quality gates for translating design docs into engineering-ready contracts.
+description: Use current reasoning, multimodal, image, voice, and tool-using models to produce validated game-design artifacts. Use for concept exploration, mechanic specifications, economy and progression contracts, visual direction, playtest synthesis, implementation handoff, or design-quality evaluation.
 ---
 
 # AI Game Designer
 
-Use this skill to produce coherent, constraint-aware game design specs with explicit implementation contracts.
+Use AI for breadth, synthesis, and artifact iteration while retaining human
+design ownership and deterministic validation.
 
 ## Workflow
 
-1. Define game vision and constraints.
-- Capture target audience, session length, progression horizon, and platform constraints.
-- Document hard constraints (economy limits, fairness goals, compliance limitations).
+1. Define the decision and evidence.
+- Capture audience, platform, session, mechanic, accessibility, originality,
+  fairness, and compliance constraints.
+- Define the output schema and evaluation rubric before prompting.
 
-2. Model loops and systems.
-- Define core loop, meta loop, and retention loop with explicit input/output resources.
-- Define feature dependencies and unlock conditions.
+2. Route work by capability.
+- Use frontier reasoning for systems and edge cases, multimodal models for
+  screenshot/storyboard critique, reference-preserving image editing for
+  controlled visual iteration, and realtime voice only for consented research
+  or prototypes.
+- Load `references/model-capability-playbook.md`.
 
-3. Define economy and progression contract.
-- Define sources/sinks and progression pacing targets.
-- Prevent degenerate loops by constraining exploit paths.
-- Declare telemetry signals needed to validate assumptions.
+3. Generate competing artifacts.
+- Ask independent passes for mechanic design, adversarial edge cases,
+  accessibility, implementation complexity, and player communication.
+- Require structured feature/state/event/economy outputs with source and
+  assumption labels.
 
-4. Validate design spec integrity.
-- Check required sections and referenced features.
-- Check consistency between loops, progression, and economy definitions.
-- Treat missing constraints or contradictory rules as blockers.
+4. Validate with tools and humans.
+- Run the deterministic spec validator.
+- Simulate economy/math claims instead of accepting model calculations.
+- Compare visual concepts against the style guide, asset provenance, and
+  commercial-rights review.
+- Use a separate evaluator pass that did not author the proposal.
 
 5. Prepare engineering handoff.
-- Provide design-to-implementation mapping and patch plan targets.
-- Include measurable acceptance criteria.
+- Provide typed states/events, failure paths, telemetry, fixtures, acceptance
+  criteria, unresolved decisions, and rejected alternatives.
 
 ## Commands
 
@@ -54,6 +62,7 @@ Return:
 
 - `references/workflow.md`: design-to-handoff process.
 - `references/design-rules.md`: loop/economy/progression guardrails.
+- `references/model-capability-playbook.md`: routing, tools, evals, and safety.
 - `references/signoff-template.md`: release handoff template.
 
 ## Execution Rules
@@ -62,3 +71,6 @@ Return:
 - Keep loop/economy dependencies internally consistent.
 - Flag exploitable or contradictory progression paths as blockers.
 - Require telemetry hooks for key balance assumptions.
+- Never treat generated prose, calculations, or images as approved evidence.
+- Preserve prompts, model/version, source inputs, generation settings, and
+  human edits for production assets.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engine Game Developer"
+  short_description: "Build and validate current Engine games end-to-end"
+  default_prompt: "Use $engine-game-developer to build or audit an Engine game across math, books, RGS, frontend events, replay, approval, and publication evidence."

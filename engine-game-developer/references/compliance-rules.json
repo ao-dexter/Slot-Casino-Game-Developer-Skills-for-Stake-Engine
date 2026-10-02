@@ -2,9 +2,8 @@
   "restrictedTerms": [
     { "phrase": "win feature", "replacement": "play feature", "socialOnly": true },
     { "phrase": "pay out", "replacement": "win / won", "socialOnly": true },
-    { "phrase": "paid out", "replacement": "win / won", "socialOnly": true },
-    { "phrase": "win", "replacement": "stake (if context matches)", "socialOnly": true, "note": "Check context carefully. 'Win' is sometimes allowed in results, but not as 'Win Feature' or 'Win Amount' usually." },
-    { "phrase": "play amount", "replacement": "play", "socialOnly": true },
+    { "phrase": "paid out", "replacement": "won", "socialOnly": true },
+    { "phrase": "stake", "replacement": "play amount", "socialOnly": true },
     { "phrase": "pays out", "replacement": "won", "socialOnly": true },
     { "phrase": "betting", "replacement": "playing", "socialOnly": true },
     { "phrase": "total bet", "replacement": "total play", "socialOnly": true },
@@ -37,11 +36,15 @@
   "requiredPhrases": [
     {
       "phrase": "rgs_url",
-      "description": "Game must use rgs_url query parameter for server routing."
+      "description": "Use the runtime RGS URL supplied by Engine."
     },
     {
-      "phrase": "Malfunction voids all pays and plays.",
-      "description": "Required game disclaimer text must be present."
+      "phrase": "Winnings are settled according to the amount received from the Remote Game Server",
+      "description": "Explain that RGS data, not browser animation, controls settlement."
+    },
+    {
+      "phrase": "TM and © 2026 Engine",
+      "description": "Use the current Engine disclaimer attribution."
     }
   ]
 }

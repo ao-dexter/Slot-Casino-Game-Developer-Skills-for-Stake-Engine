@@ -1,4 +1,4 @@
 interface:
-  display_name: "Stake Game Developer"
-  short_description: "Build and validate Stake games end-to-end"
-  default_prompt: "Use $stake-game-developer to design, validate, and ship a Stake game workflow."
+  display_name: "Stake Game Developer (Legacy)"
+  short_description: "Compatibility alias for Engine game development"
+  default_prompt: "Use $stake-game-developer only as an alias, then follow $engine-game-developer for the current Engine workflow."

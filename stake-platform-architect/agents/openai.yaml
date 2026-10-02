@@ -1,4 +1,4 @@
 interface:
-  display_name: "Stake Platform Architect"
-  short_description: "Architect Stake platform integration layers"
-  default_prompt: "Use $stake-platform-architect to design Stake platform architecture, contract boundaries, and integration readiness checks."
+  display_name: "Stake Platform Architect (Legacy)"
+  short_description: "Compatibility alias for Engine platform architecture"
+  default_prompt: "Use $stake-platform-architect only as an alias, then follow $engine-platform-architect."

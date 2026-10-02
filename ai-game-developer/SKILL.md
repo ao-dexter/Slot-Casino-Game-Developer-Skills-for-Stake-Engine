@@ -1,36 +1,48 @@
 ---
 name: ai-game-developer
-description: Build, integrate, and validate AI-driven gameplay systems for production game runtimes. Use when implementing AI behavior modules, wiring inference providers into game loops, enforcing latency/fallback budgets, validating safety and telemetry contracts, or auditing AI game features before release.
+description: Build and validate AI-assisted game systems with capability routing, typed tool calls, structured outputs, retrieval, multimodal inputs, evaluations, observability, and deterministic fallback. Use for development agents, content tooling, support features, runtime AI, provider integration, or AI release audits.
 ---
 
 # AI Game Developer
 
-Use this skill to ship AI gameplay features with deterministic runtime behavior and explicit failure handling.
+Use current models through provider-neutral capability adapters. Every model
+output remains untrusted until schema and domain validation pass.
 
 ## Workflow
 
 1. Define runtime contract first.
-- Specify AI feature goals, update cadence, latency budget, and deterministic fallback behavior.
-- Declare model/provider dependencies and allowed failure modes.
+- Specify the user value, trust boundary, data classification, latency, cost,
+  quality target, tool permissions, and deterministic fallback.
+- Create golden and adversarial evaluation cases before integration.
 
-2. Implement AI systems behind adapters.
-- Keep inference providers behind replaceable adapter interfaces.
-- Separate game loop logic from model/provider wiring.
-- Ensure each AI system has clear input/output contracts.
+2. Route by capability.
+- Load `references/model-capability-playbook.md`.
+- Select fast structured-output, frontier reasoning, multimodal, image,
+  realtime voice, computer-use, or long-context/retrieval capabilities by
+  measured task need.
+- Route to the smallest model that passes evaluations; do not hard-code a
+  vendor's flagship model.
 
-3. Enforce runtime safeguards.
-- Add timeout and fallback strategy for inference failures.
-- Bound update rates and queue growth.
-- Protect core gameplay from AI dependency outages.
+3. Build typed adapters and tools.
+- Validate JSON Schema before domain logic.
+- Allowlist tools and arguments, isolate credentials, and treat retrieved/model
+  content as prompt-injection-capable.
+- Separate provider transport, prompt/template version, retrieval, tool
+  execution, validation, and product behavior.
 
-4. Validate integration spec consistency.
-- Validate systems/models/runtime/safety/telemetry fields.
-- Validate fallback model references and guard coverage.
-- Treat missing fallback and missing telemetry as blockers.
+4. Enforce budgets and fallback.
+- Bound tokens, wall time, retries, queues, parallelism, and spend.
+- Use circuit breakers, idempotency, cancellation, and deterministic no-AI
+  behavior.
+- Protect gameplay continuity and payout-critical paths from provider outages.
 
-5. Prepare production handoff.
-- Deliver module map, runtime budgets, fallback behavior, and test expectations.
-- Include patch plan with concrete file targets.
+5. Evaluate and observe.
+- Run offline task evals, malformed-output tests, prompt-injection tests,
+  provider-failure tests, and cost/latency checks.
+- Trace model/version, template, retrieved sources, tool calls, validation,
+  fallback, latency, and cost without storing secrets or unnecessary player
+  data.
+- Require independent verification for high-impact changes.
 
 ## Commands
 
@@ -55,6 +67,7 @@ Return:
 
 - `references/workflow.md`: implementation-to-release process.
 - `references/runtime-rules.md`: runtime guardrails and constraints.
+- `references/model-capability-playbook.md`: capability routing and evaluation.
 - `references/signoff-template.md`: release handoff template.
 
 ## Execution Rules
@@ -63,3 +76,7 @@ Return:
 - Keep fallback behavior deterministic and tested.
 - Keep latency budgets explicit and enforced.
 - Flag unsafe failure modes and missing telemetry as blockers.
+- Never let a model determine RNG, payout, settlement, wallet balance, or
+  compliance approval.
+- Never execute free-form model-generated commands without allowlisting and
+  argument validation.

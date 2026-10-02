@@ -5,7 +5,8 @@ description: Create structured game info/rules content for slot games. Invoke wh
 
 # Game Info Author
 
-Use this skill to produce consistent, studio-grade “Game Info” content for slot/casino games, aligned with Stake Engine compliance wording.
+Use this skill to produce consistent, studio-grade “Game Info” content for
+Engine games and the selected jurisdiction/language.
 
 ## Workflow
 
@@ -56,7 +57,7 @@ Return a single structured block with these exact sections:
 
 ## General Disclaimer (Exact Text)
 
-Malfunction voids all wins and plays. A consistent internet connection is required. In the event of a disconnection, reload the game to finish any uncompleted rounds. The expected return is calculated over many plays. The game display is not representative of any physical device and is for illustrative purposes only. Winnings are settled according to the amount received from the Remote Game Server and not from events within the web browser. TM and © 2025 Stake Engine.
+Malfunction voids all wins and plays. A consistent internet connection is required. In the event of a disconnection, reload the game to finish any uncompleted rounds. The expected return is calculated over many plays. The game display is not representative of any physical device and is for illustrative purposes only. Winnings are settled according to the amount received from the Remote Game Server and not from events within the web browser. TM and © 2026 Engine.
 
 ## Execution Rules
 
@@ -64,3 +65,5 @@ Malfunction voids all wins and plays. A consistent internet connection is requir
 - Never contradict math or feature logic.
 - If a section is not applicable, state “Not available in this game”.
 - Preserve the exact disclaimer text and punctuation.
+- Recheck the current disclaimer at <https://studio.engine.io/docs> before
+  publication; the year and wording are time-sensitive.

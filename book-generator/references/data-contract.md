@@ -27,7 +27,7 @@ Expected row fields:
 
 ## lookUpTable_*.csv
 
-Expected row shape (aligned with Stake Engine "simulation number" and "probability" model):
+Expected row shape aligned with Engine's simulation number and probability model:
 
 - Column 0: `id` (Simulation Number) - integer-like unique identifier matching book entry
 - Column 1: `weight` (Probability/Weight) - positive number determining selection frequency
@@ -40,3 +40,5 @@ Expected row shape (aligned with Stake Engine "simulation number" and "probabili
 - Every book ID must appear in the lookup file (full coverage).
 - No duplicate IDs in books or lookup tables.
 - No non-positive weights.
+- No mode above 10,000,000 events.
+- No compressed `.jsonl.zst` file above 4.2 GB.

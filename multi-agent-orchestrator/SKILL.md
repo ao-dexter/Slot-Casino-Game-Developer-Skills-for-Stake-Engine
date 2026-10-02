@@ -1,6 +1,6 @@
 ---
 name: multi-agent-orchestrator
-description: Coordinate multi-agent execution plans with explicit dependencies, ownership boundaries, and completion gates. Use when orchestrating multiple autonomous workstreams, sequencing inter-agent tasks, resolving dependency conflicts, or validating end-to-end pipeline readiness.
+description: Coordinate parallel and staged AI-agent work with isolated context, typed handoffs, dependency gates, budgets, and independent verification. Use when work has several judgment-heavy units, specialist/reviewer roles, or a pipeline whose outputs feed later agents.
 ---
 
 # Multi-Agent Orchestrator
@@ -9,25 +9,33 @@ Use this skill to coordinate multi-agent execution with clear sequencing and dep
 
 ## Workflow
 
-1. Define scope and constraints.
-- Define participating agents, roles, task graph, and shared contracts.
-- Capture objective metrics, bounds, and release blockers.
+1. Prove orchestration is warranted.
+- Use one agent for tightly coupled work. Use parallel agents for independent
+  units and pipelines only when one stage's artifact feeds the next.
+- Load `references/model-capability-playbook.md`.
 
-2. Design implementation plan.
-- Map agent handoffs, synchronization points, and retry/escalation policy.
-- Keep ownership and dependency boundaries explicit.
+2. Define the graph.
+- Give each agent one objective, bounded context, allowed tools, output schema,
+  acceptance test, budget, and terminal states.
+- Keep shared mutable state minimal; prefer immutable artifacts and explicit
+  ownership.
 
-3. Execute and iterate.
-- Implement in small, traceable increments.
-- Record run/build context for reproducibility.
+3. Execute predictably.
+- Parallelize only independent nodes.
+- Log stage boundaries, artifact IDs, attempts, model/version, cost, and
+  validation status.
+- Resume from durable artifacts rather than replaying successful work.
 
-4. Validate contract integrity.
-- Validate dependency closure, handoff completeness, and terminal states.
-- Treat contract breaches as blockers.
+4. Verify independently.
+- Validate every handoff schema before downstream use.
+- Use a reviewer that did not author the result and can inspect executable
+  evidence.
+- Resolve conflicts against source material and tests, not majority vote.
 
-5. Prepare handoff.
-- Deliver final orchestration map, unresolved dependencies, and runbook actions.
-- Include exact commands and acceptance criteria.
+5. Handle failure.
+- Bound retries and prevent retry storms, duplicate side effects, deadlocks,
+  orphan tasks, and context contamination.
+- Stop or degrade cleanly when a required node fails.
 
 ## Output Contract
 
@@ -43,9 +51,13 @@ Return:
 
 - `references/workflow.md`: detailed execution flow.
 - `references/checklist.md`: sign-off checklist.
+- `references/model-capability-playbook.md`: routing, security, and evaluation.
 
 ## Execution Rules
 
 - Keep decisions measurable and reversible.
 - Keep validation criteria explicit before iteration.
 - Flag deadlocks, orphan tasks, or circular dependencies as blockers.
+- Never let multiple agents write the same artifact concurrently.
+- Do not pass hidden chain-of-thought between agents; pass concise decisions,
+  evidence, assumptions, and machine-readable artifacts.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Multi-Agent Orchestrator"
-  short_description: "Coordinate multi-agent execution pipelines"
-  default_prompt: "Use $multi-agent-orchestrator to plan, sequence, and monitor multi-agent workflows with explicit dependencies and delivery gates."
+  short_description: "Run bounded agent graphs with independent verification"
+  default_prompt: "Use $multi-agent-orchestrator to justify the agent graph, define typed handoffs and budgets, parallelize only independent work, and verify outputs with executable evidence."
